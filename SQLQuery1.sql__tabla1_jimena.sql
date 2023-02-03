@@ -1,4 +1,4 @@
-
+create database labSQL
 use labSQL
 create table compañia(
 comnit varchar(11) primary key,
@@ -104,3 +104,14 @@ from aseguramientos, automotores where aseplaca= autoplaca and asevalorasegurado
 
 select autoplaca, automarca, automodelo, autocilindraje, asefechainicio, asefechaexpiracion, aseestado
 from automotores, aseguramientos where autoplaca=aseplaca and asecodigo=1; 
+
+select * 
+from automotores aut
+inner join tiposAutomotores taut 
+on aut.autotipo=taut.auttipo;
+
+select *
+from aseguramientos aseg
+inner join incidentes incid
+on aseg.asecodigo=incid.incicodigo; 
+

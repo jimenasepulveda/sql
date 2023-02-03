@@ -1,4 +1,4 @@
-
+create database laboratorioSQL
 use laboratorioSQL
 create table Profe(
 	doc_prof int primary key not null,
@@ -85,3 +85,15 @@ from Profe where sal_prof in(select min(sal_prof)from Profe);
 
 select *
 from Profe where sal_prof > 500000 and sal_prof < 700000;
+
+
+select * 
+from curso cr 
+inner join Estudiantexcurso estxcur
+on cr.cod_curs= estxcur.cod_cur_estcur;
+
+select * 
+from Estudiante est
+inner join Estudiantexcurso estxcurs
+on est.doc_est=estxcurs.doc_est_estcur; 
+

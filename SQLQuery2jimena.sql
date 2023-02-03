@@ -1,4 +1,4 @@
-
+create database lSql
 use lSql
 create table cliente(
 	id_cli int primary key,
@@ -88,3 +88,18 @@ from articulo order by aut_art;
 
 select  nom_cli, dir_cli, id_ped, can_art_artped
 from cliente, pedido, Artículoxpedido, articulo where id_ped=id_ped and id_cli_ped=id_cli and id_ped=2;
+
+select * 
+from articulo art
+inner join Artículoxpedido artxped
+on art.id_art=artxped.id_art_artped;
+
+select * 
+from cliente cli 
+inner join pedido ped
+on cli.id_cli=ped.id_cli_ped;
+
+select * 
+from pedido ped 
+inner join Artículoxpedido artxped
+on ped.id_ped=artxped.id_ped_artped;
